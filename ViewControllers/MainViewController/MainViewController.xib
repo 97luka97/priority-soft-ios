@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="priority_soft_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraPreviewView" destination="rbM-zI-4jl" id="7vb-jU-jnM"/>
+                <outlet property="imageProgressLabel" destination="IUh-le-ssU" id="26X-U8-OEf"/>
+                <outlet property="statusLabel" destination="EsU-Ga-NeY" id="UUp-2j-wZk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i2C-YT-MsQ">
+                    <rect key="frame" x="0.0" y="62" width="402" height="812"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqr-el-yOr">
+                            <rect key="frame" x="0.0" y="0.0" width="402" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsU-Ga-NeY">
+                                    <rect key="frame" x="8.0000000000000036" y="16.666666666666671" width="52.333333333333343" height="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/0 images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUh-le-ssU">
+                                    <rect key="frame" x="322.33333333333331" y="16.666666666666671" width="71.666666666666686" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="EsU-Ga-NeY" firstAttribute="centerY" secondItem="Mqr-el-yOr" secondAttribute="centerY" id="Ap8-zx-sD1"/>
+                                <constraint firstItem="EsU-Ga-NeY" firstAttribute="leading" secondItem="Mqr-el-yOr" secondAttribute="leading" constant="8" id="M0g-ut-mEd"/>
+                                <constraint firstItem="IUh-le-ssU" firstAttribute="centerY" secondItem="Mqr-el-yOr" secondAttribute="centerY" id="MlL-t7-C0N"/>
+                                <constraint firstAttribute="height" constant="50" id="QuO-IQ-0KJ"/>
+                                <constraint firstAttribute="trailing" secondItem="IUh-le-ssU" secondAttribute="trailing" constant="8" id="xdp-Vi-qeD"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbM-zI-4jl">
+                            <rect key="frame" x="0.0" y="50" width="402" height="762"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq4-gv-mZc">
+                    <rect key="frame" x="314" y="768" width="72" height="72"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="capture_icon"/>
+                    <connections>
+                        <action selector="captureButtonTapped:" destination="-1" eventType="touchUpInside" id="fVL-od-msN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="pq4-gv-mZc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="DrV-Wf-Xjw"/>
+                <constraint firstAttribute="bottom" secondItem="i2C-YT-MsQ" secondAttribute="bottom" id="WYk-At-vhb"/>
+                <constraint firstItem="i2C-YT-MsQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="afd-da-AZg"/>
+                <constraint firstItem="i2C-YT-MsQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="baG-fL-IAq"/>
+                <constraint firstItem="i2C-YT-MsQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nDs-Jw-edS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pq4-gv-mZc" secondAttribute="trailing" constant="16" id="sNO-Mj-8Ef"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="capture_icon" width="72" height="72"/>
+    </resources>
+</document>
